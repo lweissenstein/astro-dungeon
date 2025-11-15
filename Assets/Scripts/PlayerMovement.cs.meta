@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 283f1e9de57f4c74694bbc2e4ab96548
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gun_down: {fileID: 4585321652342069593, guid: d39526699aac4c2fb9b6dd5d737f5808, type: 3}
+  - gun_left: {fileID: 7784183673154951399, guid: 0d1dbb597fb780640a3e7489b02b111f, type: 3}
+  - gun_right: {fileID: 2758743061573330472, guid: 8d0b773e0dd9d244782a401fadb18f5c, type: 3}
+  - gun_up: {fileID: 8414878804345282934, guid: 7b048b0bf3af44f9984fa1a1db499663, type: 3}
+  - gun_walk_down: {fileID: 4375054338545333253, guid: c6e5219321f64ab9909ade59c0e0c89e, type: 3}
+  - gun_walk_right: {fileID: 3932154525955285383, guid: f97f2a49d9b607d43b72be27baf8d11f, type: 3}
+  - gun_walk_left: {fileID: 7698206484670308190, guid: 83351d8eadefbde478a2853e84edf8c7, type: 3}
+  - gun_walk_up: {fileID: 3912641673502032632, guid: 0fd1960198a74c1ca9f0bba544d206cb, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
