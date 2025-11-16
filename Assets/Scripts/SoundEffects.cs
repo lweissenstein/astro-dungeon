@@ -16,7 +16,6 @@ public class SoundEffects : MonoBehaviour
     {
         if (bulletHitClip != null)
         {
-            // clip with a volume multiplier
             audioSource.PlayOneShot(bulletHitClip, 2.0f);
         }
     }

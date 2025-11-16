@@ -7,9 +7,9 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance;
 
     public int score = 0;
-    public TextMeshProUGUI scoreText;          // In-Game (oben rechts)
-    public TextMeshProUGUI gameOverScoreText;  // Game Over Panel
-    public TextMeshProUGUI mainMenuScoreText;  // Main Menu Panel
+    public TextMeshProUGUI scoreText;         
+    public TextMeshProUGUI gameOverScoreText; 
+    public TextMeshProUGUI mainMenuScoreText; 
 
     string filePath;
 
@@ -43,15 +43,12 @@ public class ScoreManager : MonoBehaviour
     {
         int oldHighscore = 0;
 
-        // wenn Datei existiert -> alten Wert lesen
         if (File.Exists(filePath))
             int.TryParse(File.ReadAllText(filePath), out oldHighscore);
 
-        // nur speichern wenn neuer Score höher
         if (score > oldHighscore)
             File.WriteAllText(filePath, score.ToString());
 
-        // GameOver Panel Text setzen
         if (gameOverScoreText != null)
             gameOverScoreText.text = "Your Score: " + score;
     }
@@ -69,7 +66,7 @@ public class ScoreManager : MonoBehaviour
     public void ResetHighscore()
     {
         if (File.Exists(filePath))
-            File.WriteAllText(filePath, "0"); // Datei leeren
+            File.WriteAllText(filePath, "0");
         LoadHighscore();
     }
 }

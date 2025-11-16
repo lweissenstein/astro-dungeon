@@ -9,8 +9,8 @@ public class EnemySpawner : MonoBehaviour
 
 
     [Header("Spawn Settings")]
-    public float spawnInterval = 2.0f;   // Interval of spawns
-    public float spawnDistance = 1.0f;   // how far away from camera they spawn
+    public float spawnInterval = 2.0f; 
+    public float spawnDistance = 1.0f;   
 
     [Header("Difficulty Scaling")]
     public float difficultyIncreaseRate = 0.1f;
@@ -32,7 +32,6 @@ public class EnemySpawner : MonoBehaviour
         timer += Time.deltaTime;
         difficulty += Time.deltaTime * difficultyIncreaseRate;
 
-        // spawn Rate difficulty
         spawnInterval = Mathf.Max(
             minimumSpawnInterval, spawnInterval - (Time.deltaTime * spawnRateIncrease)
         );
@@ -56,7 +55,6 @@ public class EnemySpawner : MonoBehaviour
 
     GameObject ChooseEnemyByDifficulty()
     {
-       // difficulty influences spawn of enemies
 
         float eEasy = Mathf.Clamp01(1.0f - difficulty * 0.05f);
         float eMiddle = Mathf.Clamp01(0.2f + difficulty * 0.03f);

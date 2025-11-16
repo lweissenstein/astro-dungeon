@@ -40,7 +40,6 @@ public class PowerUpSpawner : MonoBehaviour
     {
         GameObject prefabToSpawn;
 
-        // 50 / 50 chance
         if (Random.value < 0.5f)
             prefabToSpawn = bombPowerUpPrefab;
         else

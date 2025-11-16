@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
-    public Vector2 direction; // Normalisierte Richtung
+    public Vector2 direction;
     public float lifetime = 3f;
 
     private float timer = 0f;

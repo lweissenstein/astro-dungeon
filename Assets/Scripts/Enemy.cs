@@ -3,10 +3,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Stats")]
-    public int health = 1; // set health how many bullets they take
+    public int health = 1;
     public float moveSpeed = 2f;
 
-    private Transform player; // reference to player postiion
+    private Transform player;
 
     void Start()
     {
@@ -17,15 +17,12 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {   
-        // Move towards player
         if (player != null)
         {
             Vector2 dir = (player.position - transform.position).normalized;
             transform.position += (Vector3)(dir * moveSpeed * Time.deltaTime);
         }
     }
-
-    // Damage System
 
     public void TakeDamage(int damage = 1)
     {
@@ -44,8 +41,6 @@ public class Enemy : MonoBehaviour
     }
 
 
-    // Enemy hit by Bullet
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Bullet"))
@@ -57,7 +52,7 @@ public class Enemy : MonoBehaviour
             {
                 sfx.PlayBulletHit(transform.position);
             }
-            Destroy(other.gameObject); // destroy bullet on hit
+            Destroy(other.gameObject); 
         }
     }
 }

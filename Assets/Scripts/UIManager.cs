@@ -22,16 +22,14 @@ public class UIManager : MonoBehaviour
     {
         if (isRetry)
         {
-            // Directly start game after retry
             MainMenuPanel.SetActive(false);
             PausePanel.SetActive(false);
             GameOverPanel.SetActive(false);
             Time.timeScale = 1f;
-            isRetry = false; // reset for next time
+            isRetry = false; 
         }
         else
         {
-            // Normal first-time start: show main menu
             MainMenuPanel.SetActive(true);
             PausePanel.SetActive(false);
             GameOverPanel.SetActive(false);
@@ -44,7 +42,7 @@ public class UIManager : MonoBehaviour
         MainMenuPanel.SetActive(true);
         PausePanel.SetActive(false);
         GameOverPanel.SetActive(false);
-        Time.timeScale = 0f; // pause the game
+        Time.timeScale = 0f;
     }
 
     public void StartGame()
@@ -52,7 +50,7 @@ public class UIManager : MonoBehaviour
         MainMenuPanel.SetActive(false);
         PausePanel.SetActive(false);
         GameOverPanel.SetActive(false);
-        Time.timeScale = 1f; // start/resume game
+        Time.timeScale = 1f;
     }
 
     public void PauseGame()
@@ -64,7 +62,7 @@ public class UIManager : MonoBehaviour
 
     public void RetryGame()
     {
-        isRetry = true; // tell UIManager that we want to skip main menu
+        isRetry = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
