@@ -66,4 +66,11 @@ public class ScoreManager : MonoBehaviour
         else
             mainMenuScoreText.text = "Highscore: 0";
     }
+
+    public void ResetHighscore()
+    {
+        if (File.Exists(filePath))
+            File.WriteAllText(filePath, "0"); // Datei leeren
+        LoadHighscore();
+    }
 }
