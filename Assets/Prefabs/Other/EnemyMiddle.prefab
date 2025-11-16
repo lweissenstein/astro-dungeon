@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   health: 1
-  moveSpeed: 2
+  moveSpeed: 2.5
 --- !u!1001 &1690288772951662768
 PrefabInstance:
   m_ObjectHideFlags: 0
