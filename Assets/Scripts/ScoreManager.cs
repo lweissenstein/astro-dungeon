@@ -1,24 +1,30 @@
 using UnityEngine;
 using TMPro;
-using System.IO;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
     public int score = 0;
-    public TextMeshProUGUI scoreText;         
-    public TextMeshProUGUI gameOverScoreText; 
-    public TextMeshProUGUI mainMenuScoreText; 
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI gameOverScoreText;
+    public TextMeshProUGUI mainMenuScoreText;
 
-    string filePath;
+    private const string HighscoreKey = "Highscore";
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-
-        filePath = Path.Combine(Application.dataPath, "highscore.txt");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
@@ -39,15 +45,14 @@ public class ScoreManager : MonoBehaviour
             scoreText.text = "Score: " + score;
     }
 
-    public void SaveScoreToFile()
+    public void SaveScore()
     {
-        int oldHighscore = 0;
-
-        if (File.Exists(filePath))
-            int.TryParse(File.ReadAllText(filePath), out oldHighscore);
+        int oldHighscore = PlayerPrefs.GetInt(HighscoreKey, 0);
 
         if (score > oldHighscore)
-            File.WriteAllText(filePath, score.ToString());
+            PlayerPrefs.SetInt(HighscoreKey, score);
+
+        PlayerPrefs.Save();
 
         if (gameOverScoreText != null)
             gameOverScoreText.text = "Your Score: " + score;
@@ -57,16 +62,31 @@ public class ScoreManager : MonoBehaviour
     {
         if (mainMenuScoreText == null) return;
 
-        if (File.Exists(filePath))
-            mainMenuScoreText.text = "Highscore: " + File.ReadAllText(filePath);
-        else
-            mainMenuScoreText.text = "Highscore: 0";
+        int highscore = PlayerPrefs.GetInt(HighscoreKey, 0);
+        mainMenuScoreText.text = "Highscore: " + highscore;
     }
 
     public void ResetHighscore()
     {
-        if (File.Exists(filePath))
-            File.WriteAllText(filePath, "0");
+        PlayerPrefs.SetInt(HighscoreKey, 0);
         LoadHighscore();
     }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        scoreText = GameObject.Find("inGameScore")?.GetComponent<TextMeshProUGUI>();
+        gameOverScoreText = GameObject.Find("GameOverScore")?.GetComponent<TextMeshProUGUI>();
+        mainMenuScoreText = GameObject.Find("MainMenuHighScore")?.GetComponent<TextMeshProUGUI>();
+
+        UpdateScoreUI();
+        LoadHighscore();
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
+        UpdateScoreUI();
+    }
+
+
 }

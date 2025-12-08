@@ -7,6 +7,7 @@ public class PlayerCollision : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Debug.Log("Game Over!");
+            ScoreManager.Instance.SaveScore();
             UIManager.Instance.GameOver();
         }
 

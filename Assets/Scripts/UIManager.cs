@@ -51,6 +51,8 @@ public class UIManager : MonoBehaviour
         PausePanel.SetActive(false);
         GameOverPanel.SetActive(false);
         Time.timeScale = 1f;
+
+        ScoreManager.Instance.ResetScore();
     }
 
     public void PauseGame()
@@ -64,6 +66,8 @@ public class UIManager : MonoBehaviour
     {
         isRetry = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        ScoreManager.Instance.ResetScore();
     }
 
     public void ReturnToMainMenu()
