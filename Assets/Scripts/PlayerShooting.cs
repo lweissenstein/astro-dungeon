@@ -14,6 +14,8 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f)
+            return;
         fireTimer -= Time.deltaTime;
 
         shootDirection = GetMouseDirection();
@@ -50,7 +52,7 @@ public class PlayerShooting : MonoBehaviour
             }
         }
         if (activeChild == null) return;
-        
+
         Transform gunPivot = activeChild.Find("PlayerGunSprite");
         if (gunPivot == null) return;
 
@@ -61,10 +63,21 @@ public class PlayerShooting : MonoBehaviour
         Bullet b = bullet.GetComponent<Bullet>();
 
         if (b != null)
-        {
-
             b.direction = shootDirection;
 
+        Transform muzzle = gunPivot.Find("muzzle_flash_gun");
+
+        if (muzzle != null)
+        {
+            muzzle.gameObject.SetActive(true);
+
+            StartCoroutine(DisableMuzzleFlash(muzzle.gameObject, 0.07f));
         }
+    }
+
+    private System.Collections.IEnumerator DisableMuzzleFlash(GameObject flash, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        flash.SetActive(false);
     }
 }
