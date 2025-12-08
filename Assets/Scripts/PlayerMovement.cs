@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Idle Prefabs")]
     public GameObject gun_down;
     public GameObject gun_left;
-    public GameObject gun_right;
+    public GameObject gun_right; 
     public GameObject gun_up;
 
     [Header("Walk Prefabs")]
@@ -18,58 +18,62 @@ public class PlayerMovement : MonoBehaviour
     public GameObject gun_walk_up;
 
     private GameObject current;
-    private Vector2 lastDirection = Vector2.down; // letzte Bewegungsrichtung merken
+
+    private Vector2 facingDirection = Vector2.down;
 
     void Start()
     {
-        // Start mit Idle Down
         current = gun_down;
         SetActiveChild(current);
     }
 
     void Update()
     {
-        // --- Input ---
-        Vector2 move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        bool isMoving = move.magnitude > 0.1f;
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        bool isMoving = moveInput.magnitude > 0.1f;
 
-        // Letzte Richtung nur bei Bewegung speichern
-        if (isMoving)
-            lastDirection = move.normalized;
+        facingDirection = GetMouseDirection();
 
-        // Bestimme nächsten aktiven Prefab
-        GameObject next = DetermineNextPrefab(isMoving, move, lastDirection);
+        GameObject next = DetermineNextPrefab(isMoving, facingDirection);
 
-        // Wechsel nur, wenn Prefab anders
         if (next != current)
         {
             SetActiveChild(next);
             current = next;
         }
 
-        // Bewegung
-        transform.Translate(move.normalized * moveSpeed * Time.deltaTime);
+        transform.Translate(moveInput.normalized * moveSpeed * Time.deltaTime);
 
         ClampToCamera();
     }
 
-    GameObject DetermineNextPrefab(bool isMoving, Vector2 move, Vector2 lastDir)
+    Vector2 GetMouseDirection()
     {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = -Camera.main.transform.position.z;
+        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        Vector2 direction = (worldMousePos - transform.position).normalized;
+        return direction;
+    }
+
+    GameObject DetermineNextPrefab(bool isMoving, Vector2 lookDir)
+    {
+        bool isVertical = Mathf.Abs(lookDir.y) > Mathf.Abs(lookDir.x);
+
         if (isMoving)
         {
-            // Vertikal bewegen
-            if (Mathf.Abs(move.y) > Mathf.Abs(move.x))
-                return move.y > 0 ? gun_walk_up : gun_walk_down;
-            else // Sidewalk
-                return move.x > 0 ? gun_walk_left : gun_walk_right;
+            if (isVertical)
+                return lookDir.y > 0 ? gun_walk_up : gun_walk_down;
+            else
+                return lookDir.x > 0 ? gun_walk_left : gun_walk_right;
         }
         else
         {
-            // Idle: letzte Richtung nutzen
-            if (Mathf.Abs(lastDir.y) > Mathf.Abs(lastDir.x))
-                return lastDir.y > 0 ? gun_up : gun_down;
+            if (isVertical)
+                return lookDir.y > 0 ? gun_up : gun_down;
             else
-                return lastDir.x > 0 ? gun_right : gun_left;
+                return lookDir.x > 0 ? gun_right : gun_left;
         }
     }
 
@@ -86,9 +90,8 @@ public class PlayerMovement : MonoBehaviour
         Camera cam = Camera.main;
         float height = cam.orthographicSize;
         float width = height * cam.aspect;
-
         Vector3 pos = transform.position;
-        float offset = 0.5f; // optional Abstand zum Rand
+        float offset = 0.5f;
 
         pos.x = Mathf.Clamp(pos.x, -width + offset, width - offset);
         pos.y = Mathf.Clamp(pos.y, -height + offset, height - offset);

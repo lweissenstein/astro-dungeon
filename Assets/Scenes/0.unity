@@ -1238,7 +1238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpSpawner
   bombPowerUpPrefab: {fileID: 8261437748818637506, guid: 6b7b7d0ec57e5e546b2d32600fdb9590, type: 3}
   fireRatePowerUpPrefab: {fileID: 7845901605204094032, guid: 9a40e93553bb5d6428c7ad5a034cc532, type: 3}
-  spawnInterval: 30
+  spawnInterval: 25
   spawnRandomOffset: 2
 --- !u!4 &681742509
 Transform:

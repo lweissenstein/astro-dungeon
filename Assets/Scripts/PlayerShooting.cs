@@ -7,18 +7,16 @@ public class PlayerShooting : MonoBehaviour
     public float fireRate = 0.5f;
 
     [Header("PowerUps")]
-    public float permanentFireRateBoost = 0f; 
+    public float permanentFireRateBoost = 0f;
 
     private float fireTimer = 0f;
-    private Vector2 lastDirection = Vector2.down;
+    private Vector2 shootDirection = Vector2.down;
 
     void Update()
     {
         fireTimer -= Time.deltaTime;
 
-        Vector2 move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        if (move.magnitude > 0.1f)
-            lastDirection = move.normalized;
+        shootDirection = GetMouseDirection();
 
         float effectiveFireRate = Mathf.Max(0.05f, fireRate - permanentFireRateBoost);
 
@@ -29,9 +27,18 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
+    Vector2 GetMouseDirection()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = -Camera.main.transform.position.z;
+        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        return (worldMousePos - transform.position).normalized;
+    }
+
     void Shoot()
     {
-        if (bulletPrefab == null || lastDirection == Vector2.zero) return;
+        if (bulletPrefab == null) return;
 
         Transform activeChild = null;
         foreach (Transform child in transform)
@@ -49,7 +56,12 @@ public class PlayerShooting : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
         Bullet b = bullet.GetComponent<Bullet>();
+
         if (b != null)
-            b.direction = lastDirection.normalized;
+        {
+
+            b.direction = shootDirection;
+
+        }
     }
 }
