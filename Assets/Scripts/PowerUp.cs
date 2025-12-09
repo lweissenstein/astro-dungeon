@@ -12,8 +12,6 @@ public class PowerUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("PowerUp collected!");
-
             ActivatePowerUp();
 
             Destroy(gameObject);

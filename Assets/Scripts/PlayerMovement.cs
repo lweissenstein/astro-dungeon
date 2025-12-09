@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Idle Prefabs")]
     public GameObject gun_down;
     public GameObject gun_left;
-    public GameObject gun_right; 
+    public GameObject gun_right;
     public GameObject gun_up;
 
     [Header("Walk Prefabs")]
@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     private GameObject current;
 
     private Vector2 facingDirection = Vector2.down;
+
+    [Header("Camera Clamp")]
+    public float bottomExtra = 0.5f; // extra space at bottom
 
     void Start()
     {
@@ -93,8 +96,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 pos = transform.position;
         float offset = 0.5f;
 
+        // Only bottom clamp modified with bottomExtra
         pos.x = Mathf.Clamp(pos.x, -width + offset, width - offset);
-        pos.y = Mathf.Clamp(pos.y, -height + offset, height - offset);
+        pos.y = Mathf.Clamp(pos.y, -height + offset + bottomExtra, height - offset);
 
         transform.position = pos;
     }
