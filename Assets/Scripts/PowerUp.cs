@@ -8,19 +8,6 @@ public class PowerUp : MonoBehaviour
     [Header("Settings")]
     public float fireRateBoostAmount = 0.2f;
 
-    // redundant?
-    /* 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            ActivatePowerUp();
-
-            Destroy(gameObject);
-        }
-    }
-    */
-
     public void ActivatePowerUp()
     {
         Debug.Log($"ActivatePowerUp called for {type}");

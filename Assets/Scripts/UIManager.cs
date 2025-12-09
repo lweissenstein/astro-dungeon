@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro; // Don't forget this!
+using TMPro; 
 
 public class UIManager : MonoBehaviour
 {
@@ -12,9 +12,9 @@ public class UIManager : MonoBehaviour
     public GameObject GameOverPanel;
 
     [Header("Text References")]
-    public TextMeshProUGUI inGameScoreText;     // Drag 'inGameScore' here in Inspector
-    public TextMeshProUGUI gameOverScoreText;   // Drag 'GameOverScore' here in Inspector
-    public TextMeshProUGUI mainMenuScoreText;   // Drag 'MainMenuHighScore' here in Inspector
+    public TextMeshProUGUI inGameScoreText; 
+    public TextMeshProUGUI gameOverScoreText; 
+    public TextMeshProUGUI mainMenuScoreText;
 
     private bool isPaused = false;
     public static bool isRetry = false;
@@ -27,7 +27,6 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        // FIX: Push references to ScoreManager immediately when scene starts
         if (ScoreManager.Instance != null)
         {
             ScoreManager.Instance.RefreshReferences(inGameScoreText, gameOverScoreText, mainMenuScoreText);
@@ -49,8 +48,6 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-
-    // ... Rest of your existing methods (ShowMainMenu, StartGame, etc.) stay the same ...
 
     public void ShowMainMenu()
     {
@@ -86,8 +83,6 @@ public class UIManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        // This reloads the scene, which triggers Start() again, 
-        // causing references to be refreshed correctly.
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -107,6 +102,19 @@ public class UIManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ResetHighscoreUI()
+    {
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.ResetHighscore();
+
+            if (mainMenuScoreText != null)
+            {
+                mainMenuScoreText.text = "Highscore: 0";
+            }
+        }
     }
 
     void Update()

@@ -1540,9 +1540,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 980885765}
-        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
-        m_MethodName: ResetHighscore
+      - m_Target: {fileID: 1778835459}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ResetHighscoreUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -8,7 +8,6 @@ public class ScoreManager : MonoBehaviour
 
     public int score = 0;
 
-    // These references will now be assigned by the UIManager
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverScoreText;
     public TextMeshProUGUI mainMenuScoreText;
@@ -17,9 +16,6 @@ public class ScoreManager : MonoBehaviour
 
     void Awake()
     {
-        // Remove OnSceneLoaded subscription, we will handle this via UIManager now
-        // SceneManager.sceneLoaded += OnSceneLoaded; 
-
         if (Instance == null)
         {
             Instance = this;
@@ -31,7 +27,6 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    // Call this from UIManager.Start()
     public void RefreshReferences(TextMeshProUGUI gameScore, TextMeshProUGUI overScore, TextMeshProUGUI menuScore)
     {
         scoreText = gameScore;
@@ -67,7 +62,6 @@ public class ScoreManager : MonoBehaviour
             gameOverScoreText.text = "Your Score: " + score;
     }
 
-    // Made public so we can call it after assigning references
     public void LoadHighscore()
     {
         if (mainMenuScoreText == null) return;
@@ -79,8 +73,8 @@ public class ScoreManager : MonoBehaviour
     public void ResetHighscore()
     {
         PlayerPrefs.SetInt(HighscoreKey, 0);
-        PlayerPrefs.Save(); // FIX: Force save immediately
-        LoadHighscore(); // Update the UI immediately
+        PlayerPrefs.Save();
+        LoadHighscore();
     }
 
     public void ResetScore()
