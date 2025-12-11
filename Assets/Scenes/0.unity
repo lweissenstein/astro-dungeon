@@ -1045,10 +1045,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -2
-    y: -1.5000001
-    width: 4
-    height: 3.0000002
+    x: -0.16666667
+    y: -0.16666666
+    width: 1.3333334
+    height: 1.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpSpawner
   bombPowerUpPrefab: {fileID: 8261437748818637506, guid: 6b7b7d0ec57e5e546b2d32600fdb9590, type: 3}
   fireRatePowerUpPrefab: {fileID: 7845901605204094032, guid: 9a40e93553bb5d6428c7ad5a034cc532, type: 3}
-  spawnInterval: 20
+  spawnInterval: 17
   spawnRandomOffset: 2
 --- !u!4 &681742509
 Transform:
@@ -3331,7 +3331,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.6792453, g: 0.019551167, b: 0, a: 1}
+  m_fontColor: {r: 0.78431374, g: 0.21176471, b: 0.20784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5621,6 +5621,7 @@ GameObject:
   - component: {fileID: 1778835456}
   - component: {fileID: 1778835455}
   - component: {fileID: 1778835459}
+  - component: {fileID: 1778835460}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5732,6 +5733,19 @@ MonoBehaviour:
   inGameScoreText: {fileID: 569009367}
   gameOverScoreText: {fileID: 1246666953}
   mainMenuScoreText: {fileID: 783548972}
+--- !u!114 &1778835460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778835454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64726e007cb2be42b74131ac6ebfd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenshotHotkey
+  supersize: 1
 --- !u!1 &1794241388
 GameObject:
   m_ObjectHideFlags: 0

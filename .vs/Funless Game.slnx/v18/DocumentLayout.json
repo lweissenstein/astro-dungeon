@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\ScreenshotHotkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ScreenshotHotkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\PowerUpSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PowerUpSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -58,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Enemy.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
@@ -70,12 +74,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T11:16:02.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T11:16:02.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PowerUp.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\PowerUp.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUp.cs",
@@ -83,12 +86,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PowerUp.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T20:04:53.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T20:04:53.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PlayerCollision.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\PlayerCollision.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCollision.cs",
@@ -96,12 +98,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerCollision.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T10:48:09.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T10:48:09.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "EnemySpawner.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\EnemySpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemySpawner.cs",
@@ -109,12 +110,11 @@
               "RelativeToolTip": "Assets\\Scripts\\EnemySpawner.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T09:10:41.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T09:10:41.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "SoundEffects.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\SoundEffects.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SoundEffects.cs",
@@ -122,12 +122,11 @@
               "RelativeToolTip": "Assets\\Scripts\\SoundEffects.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T16:40:44.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T16:40:44.15Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PlayerShooting.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\PlayerShooting.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerShooting.cs",
@@ -135,12 +134,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerShooting.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T21:41:32.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T21:41:32.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Bullet.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
@@ -148,12 +146,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T22:54:51.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T22:54:51.694Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GunRotator.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\GunRotator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GunRotator.cs",
@@ -161,12 +158,11 @@
               "RelativeToolTip": "Assets\\Scripts\\GunRotator.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T14:57:20.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T14:57:20.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
@@ -174,12 +170,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T12:27:47.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T12:27:47.225Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UIManager.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager.cs",
@@ -187,12 +182,11 @@
               "RelativeToolTip": "Assets\\Scripts\\UIManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T14:22:17.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T14:22:17.374Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ScoreManager.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\ScoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreManager.cs",
@@ -200,20 +194,32 @@
               "RelativeToolTip": "Assets\\Scripts\\ScoreManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T14:24:53.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T14:24:53.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PowerUpSpawner.cs",
               "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\PowerUpSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUpSpawner.cs",
               "ToolTip": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\PowerUpSpawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\PowerUpSpawner.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T15:35:20.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScreenshotHotkey.cs",
+              "DocumentMoniker": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\ScreenshotHotkey.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenshotHotkey.cs",
+              "ToolTip": "L:\\Projekte\\FirstEndlessGame\\Funless Game\\Assets\\Scripts\\ScreenshotHotkey.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScreenshotHotkey.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T21:16:53.675Z",
               "EditorCaption": ""
             }
           ]
