@@ -26,7 +26,7 @@ A few in-game screenshots. More can be found in [Screenshots](Screenshots) - but
 ## Play the Game
 
 You can try Astro Dungeon online on Itch.io:  
-[Play Astro Dungeon](https://weissenstein.itch.io/funless-game) 
+[Play Astro Dungeon](https://weissenstein.itch.io/astro-dungeon) 
 
 ## Key Features
 
