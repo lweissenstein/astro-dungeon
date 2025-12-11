@@ -1,4 +1,4 @@
-# Funless Game
+# Astro Dungeon
 
 **Developer:** Lennart Weissenstein
 **Project:** 2D Endless Top-Down Shooter  
@@ -7,16 +7,16 @@
 
 ## Overview
 
-Funless Game is a 2D endless top-down shooter where you play as a stranded astronaut, fending off waves of alien enemies. Each wave grows progressively harder, requiring players to use both their weapons and power-ups strategically to survive.
+Astro Dungeon is a 2D endless top-down shooter where you play as a stranded astronaut, fending off waves of alien enemies. Each wave grows progressively harder, requiring players to use both their weapons and power-ups strategically to survive.
 
-Players can aim and shoot in any direction using the mouse, with the gun rotating to match the firing direction. The game includes power-ups, a variety of enemies, and a local highscore system that tracks the player’s best performance.
+Players can aim and shoot in any direction using the mouse, with the gun rotating to match the firing direction. The game includes power-ups, a variety of enemies, and a local highscore system that tracks the playerâ€™s best performance.
 
 ---
 
 ## Play the Game
 
-You can try Funless Game online on Itch.io:  
-[Play Funless Game](https://weissenstein.itch.io/funless-game) 
+You can try Astro Dungeon online on Itch.io:  
+[Play Astro Dungeon](https://weissenstein.itch.io/funless-game) 
 
 ## Key Features
 
@@ -41,7 +41,7 @@ You can try Funless Game online on Itch.io:
 
 ## Challenges
 
-- Implementing smooth **360° shooting** and gun rotation using directional sprites.  
+- Implementing smooth **360Â° shooting** and gun rotation using directional sprites.  
 - Troubleshooting **ShaderGraph issues** and creating a custom shader for power-ups.  
 - Balancing **power-ups and difficulty scaling** to keep gameplay fair and engaging.  
 - Improving the overall **visual style and presentation** to give the game a polished look and feel.
