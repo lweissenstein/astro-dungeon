@@ -5,15 +5,27 @@
 
 ---
 
-## Overview
-
-Astro Dungeon is a 2D endless top-down shooter where you play as a stranded astronaut, fending off waves of alien enemies. Each wave grows progressively harder, requiring players to use both their weapons and power-ups strategically to survive.
-
-Players can aim and shoot in any direction using the mouse, with the gun rotating to match the firing direction. The game includes power-ups, a variety of enemies, and a local highscore system that tracks the player’s best performance.
+### Overview
+Astro Dungeon is a 2D top-down shooter where you play a stranded astronaut fighting endless waves of aliens. Survive by aiming in any direction, using your weapons and power-ups strategically. Track your best performance with a local highscore system.
 
 ---
 
-## Screenshots
+### Play the Game
+
+You can try Astro Dungeon online on Itch.io:  
+[Play Astro Dungeon](https://weissenstein.itch.io/astro-dungeon) 
+
+---
+
+### Controls
+
+- **Move:** WASD or Arrow Keys  
+- **Shoot:** Automatically toward mouse cursor  
+- **Pause:** Esc  
+
+---
+
+### Screenshots
 
 A few in-game screenshots. More can be found in [Screenshots](Screenshots) - but better try it for yourself!.
 
@@ -23,12 +35,7 @@ A few in-game screenshots. More can be found in [Screenshots](Screenshots) - but
 
 ---
 
-## Play the Game
-
-You can try Astro Dungeon online on Itch.io:  
-[Play Astro Dungeon](https://weissenstein.itch.io/astro-dungeon) 
-
-## Key Features
+### Key Features
 
 - **Top-down endless shooter** with progressively increasing difficulty  
 - **Mouse-aimed shooting** with rotating gun visuals  
@@ -41,15 +48,7 @@ You can try Astro Dungeon online on Itch.io:
 
 ---
 
-## Controls
-
-- **Move:** WASD or Arrow Keys  
-- **Shoot:** Automatically toward mouse cursor  
-- **Pause:** Esc  
-
----
-
-## Challenges
+### Challenges
 
 - Implementing smooth **360° shooting** and gun rotation using directional sprites.  
 - Troubleshooting **ShaderGraph issues** and creating a custom shader for power-ups.  
@@ -58,8 +57,6 @@ You can try Astro Dungeon online on Itch.io:
 
 ---
 
-## Assets & Licenses
+### Assets & Licenses
 
 All third-party assets used in this project are freely licensed. See [licenses.md](Licenses/licenses.md) for details.
-
----
