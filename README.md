@@ -5,11 +5,6 @@
 
 ---
 
-### Overview
-Astro Dungeon is a 2D top-down shooter where you play a stranded astronaut fighting endless waves of aliens. Survive by aiming in any direction, using your weapons and power-ups strategically. Track your best performance with a local highscore system.
-
----
-
 ### Play the Game
 
 You can try Astro Dungeon online on Itch.io:  
@@ -22,6 +17,11 @@ You can try Astro Dungeon online on Itch.io:
 - **Move:** WASD or Arrow Keys  
 - **Shoot:** Automatically toward mouse cursor  
 - **Pause:** Esc  
+
+---
+
+### Overview
+Astro Dungeon is a 2D top-down shooter where you play a stranded astronaut fighting endless waves of aliens. Survive by aiming in any direction, using your weapons and power-ups strategically. Track your best performance with a local highscore system.
 
 ---
 
