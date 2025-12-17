@@ -1,6 +1,6 @@
 # Astro Dungeon
 
-**Developer:** Lennart Weissenstein
+**Developer:** Lennart Weissenstein  
 **Project:** 2D Endless Top-Down Shooter  
 
 ---
